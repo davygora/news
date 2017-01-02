@@ -19,9 +19,8 @@ task :fetch_data => :environment do
     end
 
     doc.css('.subtext .hnuser').each do |name|
-      author = name.text
       authors.push(
-        author: author)
+        author: name.text)
     end
   end
   results = titles_links.map.with_index {|e,i| e.merge(authors[i])}
