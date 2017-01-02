@@ -4,6 +4,15 @@
 * Rails version - 4.2.5.2
 * Database - Postgresql
 
+#### How to run:
+```sh
+  $ git clone git@github.com:davygora/news.git
+  Update username & password in /config/database.yml
+  $ rake db:setup
+  $ rake db:migrate
+  $ rails s
+```
+
 #### How to run rake task:
 ```sh
   $ rake fetch_data
