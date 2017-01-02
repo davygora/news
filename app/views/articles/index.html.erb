@@ -1,20 +1,21 @@
 <center><h3>News from news.ycombinator.com</h3></center>
- 
-<table>
-  <tr>
-    <th>Id</th>
-    <th>Title</th>
-    <th>Url</th>
-    <th>Author</th>
-  </tr>
- 
-  <% @articles.each do |article| %>
+<div class="container-fluid">
+  <table class="table table-striped">
     <tr>
-      <td><%= article.id %></td>
-      <td><%= article.title %></td>
-      <td><a href="<%= article.url %>"><%= article.url %></td>
-      <td><%= article.author %></td>
+      <th >Id</th>
+      <th>Title</th>
+      <th>Url</th>
+      <th>Author</th>
     </tr>
-  <% end %>
-</table>
-<%= will_paginate @articles %>
+   
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.id %></td>
+        <td><%= article.title %></td>
+        <td><a href="<%= article.url %>"><%= article.url %></a></td>
+        <td><%= article.author %></td>
+      </tr>
+    <% end %>
+  </table>
+<center><%= will_paginate @articles %></center>
+</div>
