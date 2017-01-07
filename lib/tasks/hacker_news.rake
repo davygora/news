@@ -5,7 +5,7 @@ task :fetch_data => :environment do
 
   results, titles_links, authors = [], [], []
 
-  (1..5).each do |i|
+  (3..6).each do |i|
     doc = Nokogiri::HTML(open("https://news.ycombinator.com/news?p=#{i}").read)
 
     doc.css('.athing').each do |article|
